@@ -74,5 +74,73 @@ my_var = 1 # This assigns an integer value to my_var
 print(float(my_var)) # This casts my_var to a float and prints 1.0
 print(str(my_var)) # This casts my_var to a string and prints "1"
 
+#input function allows us to get user input from the console
+user_input = input("Enter something: ") # This prompts the user to enter something
+print("You entered:", user_input) # This prints the user's input
+
+#if condition
+if user_input:
+    print("You entered something!")
+else:
+    print("You didn't enter anything.")
+
+#we can nest if statements
+if user_input:
+    print("You entered something!")
+    if user_input == "Hello":
+        print("You entered Hello!")
+    else:
+        print("You didn't enter Hello.")
+
+#we can use elif for multiple conditions
+if user_input == "Hello":
+    print("You entered Hello!")
+elif user_input == "Goodbye":
+    print("You entered Goodbye!")
+else:
+    print("You entered something else.")
+
+
+#while loop
+while user_input != "exit":
+    user_input = input("Enter something (type 'exit' to quit): ")
+    print("You entered:", user_input)
+
+#for loop
+my_list = [1, 2, 3, 4, 5]
+for i in my_list:
+    print("Iteration:", i)
+
+#range function generates a sequence of numbers
+#range(start, stop, step)
+for i in range(1, 10, 2):
+    print("Odd number:", i)
+
+#enumerate function adds a counter to an iterable and returns it as an enumerate object
+for index, value in enumerate(my_list):
+    print("Index:", index, "Value:", value)
+
+#Defining a function
+def my_function(param1, param2):
+    print("Parameter 1:", param1)
+    print("Parameter 2:", param2)
+
+my_function("Hello", "World") # This calls the function my_function with the arguments "Hello" and "World" but doesn't return anything.
+
+#Returning a value
+def my_function(param1, param2):
+    print("Parameter 1:", param1)
+    print("Parameter 2:", param2)
+    return param1 + " " + param2
+
+result = my_function("Hello", "World") # This calls the function my_function and stores the returned value in result
+print("Result:", result) # This prints the result
+
+#Function with default parameter values
+def my_function(param1, param2="World"):
+    print("Parameter 1:", param1)
+    print("Parameter 2:", param2)
+
+my_function("Hello") # This calls the function my_function with the argument "Hello" and uses the default value for param2
 
 
