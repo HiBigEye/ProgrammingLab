@@ -143,4 +143,39 @@ def my_function(param1, param2="World"):
 
 my_function("Hello") # This calls the function my_function with the argument "Hello" and uses the default value for param2
 
+#Docstring
+def my_function(param1, param2):
+    """
+    This is a docstring for my_function.
+    It takes two parameters and prints them.
+    """
+    print("Parameter 1:", param1)
+    print("Parameter 2:", param2)
 
+#Calling the function
+my_function("Hello", "World")
+
+#help; it can be used to get information about the function defined or imported
+help(my_function) #this shows the docstring for my_function
+
+#Scope of a function: Local, Enclosing, Global, Built-in
+#Local scope: Variables defined within a function
+def local_scope():
+    local_var = "I am local"
+    print(local_var)
+
+#Enclosing scope: Variables defined in the enclosing function
+def enclosing_scope():
+    enclosing_var = "I am enclosing"
+    def inner_function():
+        print(enclosing_var)
+    inner_function()
+
+#Global scope: Variables defined at the top level of a script
+global_var = "I am global"
+def global_scope():
+    print(global_var)
+
+#Built-in scope: Names preassigned in the built-in names module
+def built_in_scope():
+    print(len("Hello")) # len is a built-in function
