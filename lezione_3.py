@@ -158,6 +158,40 @@ del my_dict['Padova'] #<-- Elimina l'elemento associato alla chiave 'Padova'
 #Per verificare la presenza dei valori nel dizionario
 34100 in my_dict.values()
 
+#Metodi utili per ritornare chiavi, valori o chiavi-valori
+# N.B. Questi metodi non restituiscono liste ma oggetti speciali chiamati "view" che si comportano come
+#una collezione di chiavi, valori, tuple chiavi-valori
+my_dict.keys() #Solo chiavi
+my_dict.values() #Solo valori
+my_dict.items() #Chiavi-valori
+
+for chiave, valore in my_dict.items():
+    print(chiave, valore)
+
+#Per avere una lista vera e propria
+dict_to_list = dict(my_dict.keys())
+
+###############################################################
+#LE TUPLE
+#Liste di elementi separati da virgole e di tipo immutabile
+
+tupla_1 = (2,)
+tupla_2 = 2,
+
+#Posso usare le tuple per assegnare più valori contemporaneamente
+(a,b,c) = (1,2,3)
+
+#################################################################
+#I SET (Gli insiemi)
+#SOno una collezione immutabile di elementi per cui l'ordine non conta ma in cui gli oggetti sono unici
+
+f = {'a','a','a', 'b', 's', 'c'}
+g = set('a', '5')
+h = set('abracadabra')
+print(type(f),type(h)) 
+
+
+
 
 
 
