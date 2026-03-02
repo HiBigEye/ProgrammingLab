@@ -107,7 +107,61 @@ decapita(t_1)
 print(t_1)
 #In questo caso funziona perché il valore di ritorno viene salvato nella variabile globale t_1 quando la funzione viene chiamata
 
-#Una alternativa è quella di utilizzare nella funzione un metodo che modifica la lista di partenza
+#Una alternativa è quella di modificare la lista di partenza nella funzione, senza crearne un'altra
+def decapita_nuova(t):
+    t[0:2] = [t[1]]
+
+decapita(t_1)
+print(t_1)
+
+#LA FUNZIONE split()
+#E' un metodo delle stringhe che permette di dividere una stringa in una lista di sottostringhe, usando un separatore
+stringa = "CIAO MONDO"
+stringa.split() #Se non viene passato nessun argomento alla funzione, il default è utilizzare lo spazio
+print(stringa) #In ogni caso la stringa di partenza non viene modificata quindi se si vuole salvare la lista bisogna creare una nuova variabile
+
+stringa_2 = "Ciao-Mondo"
+lista_5 = stringa_2.split("-")
+print(stringa_2, lista_5) #Ciao-Mondo ['Ciao', 'Mondo']
+
+####################################################################################################
+####################################################################################################
+####################################################################################################
+
+#DIZIONARI
+#Sono mappe di coppie di elementi in cui è presente una chiave e un valore
+#Si accede ai valori dei dizionari tramite la chiave
+
+my_dict = {'Trieste': 34100, 'Padova': 35100} #stringa -> numero
+
+#Le chiavi possono essere qualsiasi tipo di dato immutabile (tuple, stringhe, interi ecc.)
+
+diz_1 = dict()
+diz_2 = {}
+
+my_dict = {34100: 'Trieste', 35100: 'Padova'}
+my_dict = {'Trieste': 'TS', 'Padova':'PD'}
+
+my_dict['Trieste'] #<-- In questo modo si accede al valore associato alla chiave Trieste
+
+#Posso aggiungere elementi e cambiarne i valori
+my_dict['Venezia'] = 30121 #<-- Il  valore 'Venezia' non è presente quindi lo sto creando
+my_dict['Venezia'] = 30100 #<-- Il valore è presente quindi lo sto modificando
+
+#Posso anche cancellare elementi
+del my_dict['Padova'] #<-- Elimina l'elemento associato alla chiave 'Padova'
+
+#Valgono gli operatori di appartenenza ma solo ripetto alle chiavi e non rispetto ai valori
+'Trieste' in my_dict #True
+34100 in my_dict #False
+
+#Per verificare la presenza dei valori nel dizionario
+34100 in my_dict.values()
+
+
+
+
+
 
 
 
