@@ -138,5 +138,15 @@ for i in lista_base:
 
 for i in lista_stringa:
     print(i)
+
+"""
+def numeri_parole(my_list):
+    my_dict = {0: 'Zero', 1:'Uno', 2: 'Due', 3:'Tre', 4:'Quattro', 5:'Cinque', 6:'Sei', 7:'Sette', 8:'Otto', 9:'Nove'}
+    risultato_parole = []
+    for numero in my_list:
+        parola_corrisp = my_dict[numero]
+        risultato_parole.append(parola_corrisp)
+    return risultato_parole
+"""
         
 
