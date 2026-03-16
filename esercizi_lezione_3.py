@@ -27,6 +27,16 @@ def is_palindrome(stringa):
     else:
         print("La stringa è palindroma!")
         return True
+    
+"""
+versione più pulita
+
+def is_palindrome(stringa):
+    invert = stringa[::-1]      <-- Inverte la stringa da inizio a fine
+    if(invert == stringa)
+        return True
+    return False
+"""
         
 
 stringa = "aabbaammaabbaa"
@@ -45,6 +55,19 @@ def scambia_valori(A, i, j):
     A[j] = temp
     print("New A[j]: ", A[j])
     return A
+
+"""
+Versione alternativa più pulita e pythonica
+
+A = list(map(int, input("Inserire gli elementi della lista: ").split()))
+
+i = int(input("Inserire il primo indice che si vuole scambiare: "))
+j = int(input("Inserire il secondo indice che si vuole scambiare: "))
+
+A[i], A[j] = A[j], A[i]
+
+print(A)
+"""
 
 lista = [1,2,3,4,5]
 print("\n\nLista Originale: ")
@@ -67,6 +90,14 @@ def common_element(lista_1,lista_2):
     else:
         print("Nessun elemento in comune!")
         return False
+    
+"""
+def common_elements(A,B):
+    for elem in A:
+        if elem in B:
+            return True
+    return False
+"""
     
 lista_1 = [1,3,5,6,4,2]
 lista_2 = [33,2,88]
